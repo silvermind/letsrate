@@ -69,7 +69,7 @@ module Letsrate
                                        :class_name => "Rate",
                                        :as => :rateable
 
-        has_many "#{dimension}_raters".to_sym, :through => "#{dimension}_rates", :source => :rater, :source_type => "User"
+        has_many "#{dimension}_raters".to_sym, :through => "#{dimension}_rates", :source => :rater
 
 
         has_one "#{dimension}_average".to_sym, :as => :cacheable, :class_name => "RatingCache",
